@@ -15,7 +15,7 @@ long_switch_data <- switch_data |> select( #switching the data set I have into l
 plot_one <- ggplot(long_switch_data, aes(time, value,group = participant.ID)) + #creating a boxplot and lime graph showing the mood values at each time point
         geom_boxplot(aes(group = time), fill = "grey", outlier.shape = NA, alpha = 0.3) + geom_line(alpha=0.15, linewidth = 0.4) + 
                        geom_point(aes(color=time), position = position_jitter(width=0.06, height = 0), size=2, alpha = 0.4) + 
-  facet_grid(change_type ~ treatment) + #made the graph into a facet grid to show the different treatments and different mood values at baseline and post 
+  facet_grid(change_type ~ treatment, labeller = label_both) + #made the graph into a facet grid to show the different treatments and different mood values at baseline and post 
          labs(x = NULL, y = "Affect score") + theme(legend.position = "none")
 plot_one
 

@@ -29,6 +29,8 @@ For this assignment I used, StackOverflow to get tips on how to check for missin
 ##Assignment 3
 The script I made for this assignment is located in :/hw3Jan23/scripts/assignment_3.R and the main working directory is QMEE folder where all the sub directories are located 
 
+JD: I guess this means it's intended to be run from there, would be clearer to say it that way (since you asked in your email what you should do different; it's a minor point).
+
 For plot 1 I was trying to show how participants' positive and negative affect scores change from baseline to post, in each win and loss conditions. The goal for me was to be able to visualize the changes through the use of the linegraph to show in which direction the data was moving. 
 I was hoping to see the patterns and within participant changes across time. 
 Converting the data into long format allowed me to manipulate the data in the necessary ways to graph it. I needed each participant to have data for their baseline(negative), post(negative), baseline(positive), and post(positive). The 135 participants were then divided into their assigned treatments respectively. 
@@ -44,3 +46,7 @@ The positive and negative effects were divided to see the two measures distinctl
 Each plot was put against a common y-axis according to the Cleveland Hierarchy. Faceting once again allowed us to keep the two valences separate and allowed me to follow the proximity of comparisons rule. 
 
 For this assignment, I used some tips from StackOverflow and then finalized my understanding using ChatGPT. 
+
+JD: All seems very sensible. Plots look good. I added suggested code to label the facets for one of your plots. I don't follow the science 100% (probably my fault because I'm a bit overworked right now), but am wondering if the y-axis label on the second plot could simpler and/or clearer. You could complement it with a brief plot title.
+
+Grade 2.1/3
