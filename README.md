@@ -50,3 +50,10 @@ For this assignment, I used some tips from StackOverflow and then finalized my u
 JD: All seems very sensible. Plots look good. I added suggested code to label the facets for one of your plots. I don't follow the science 100% (probably my fault because I'm a bit overworked right now), but am wondering if the y-axis label on the second plot could simpler and/or clearer. You could complement it with a brief plot title.
 
 Grade 2.1/3
+
+##Assignment 4
+I have submitted the PDF version of my assignment on Github. I hope it is in the format you wanted. 
+
+It is in the directory:
+:/hw4Jan30/assignment_4.pdf
+
