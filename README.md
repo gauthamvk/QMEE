@@ -57,3 +57,7 @@ I have submitted the PDF version of my assignment on Github. I hope it is in the
 It is in the directory:
 :/hw4Jan30/assignment_4.pdf
 
+##Assignment 5
+I have submitted the PDF version of my assignment on Github. Thank you! It is in the directory 
+:/hw5Feb6/Assignment_5.pdf
+
