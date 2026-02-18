@@ -5,7 +5,7 @@ library(see)
 library(emmeans)
 library(broom)
 
-grit_scores <- read.csv("hw6Feb13/data/prelim test.csv")
+grit_scores <- read.csv("hw6Feb13/data/prelim_test.csv")
 
 #Converting GRIT scores to GRIT_Z scores 
 grit_z <- grit_scores |> mutate(grit_z = as.numeric(scale(GRIT.Score)))
