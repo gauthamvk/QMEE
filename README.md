@@ -1,3 +1,4 @@
+
 # QME-BIO708
 BIO708 Repository 
 ##Assignment 1 
@@ -61,3 +62,27 @@ It is in the directory:
 I have submitted the PDF version of my assignment on Github. Thank you! It is in the directory 
 :/hw5Feb6/Assignment_5.pdf
 
+##Assignment 6
+Hypothesis: We hypothesize that perseverance (GRIT scores) buffers the affective impact
+of a loss, thus reducing the expression of loser effects. 
+Individuals who have higher GRIT will be more likely to stay in the same game following a loss.
+
+Diagnostic plot: I am running a logistic regression model for my data. 
+My data is set up in a manner that participants are all forced to lose in a video game,
+following which they are given a choice to either keep playing the same game or
+switch to a different one. A logistic regression model was fit predicting binary decision
+to stay (1) versus switch (0) from standardized GRIT scores. Model diagnostic plots do not
+showcase any violations worth fixing. 
+
+Prediction plot: My prediction plot shows the estimated probability of choosing to stay
+as a function of standardized GRIT. The slight increase in the line indicates that with an
+increase in GRIT, the probability of staying increases. However, with the wide confidence
+interval, it showcases uncertainty in my pilot data. 
+
+Inferential plot:  The coefficient plot shows the estimated log-odds effect of
+standardized GRIT scores on the probability of individuals staying with the same game after
+a loss. The coefficient for GRIT is around β = 0.16. Although it is positive, it is not
+possible to make any statements regarding this value since the confidence intervals cross 0.
+This means that the effect of GRIT is unclear and the study needs further data. 
+Currently, I have about 88 participants and after conducting a power analysis,
+I will need around 179 to get a fully powered study. 
