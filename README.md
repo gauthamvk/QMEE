@@ -62,6 +62,16 @@ It is in the directory:
 I have submitted the PDF version of my assignment on Github. Thank you! It is in the directory 
 :/hw5Feb6/Assignment_5.pdf
 
+#### JD comments
+
+I'm not sure why you say (more than once) that your interval variables are going to be used as continuous variables; I'm assuming you understand that an interval variable is a type of continuous variable, in the broad sense – if anything, the emphasis implies that your scores are not integers, but of course they are. Similarly you say that your motivation questions are ordinal, and then later categorical, which is either redundant or confusing.
+
+The t test is an unusual choice here. It's not terrible, but it comes down to treat the variable you think is causative GRIT as the response variable. This will make it difficult to control for confounders (it's also interesting that you mention several possible confounders, but seem to exclude them from your analysis). The more common thing to do here would be a logistic regression with the decision as the response variable (also, avoid calling the decision a “preference”, better to be concrete that you mean the binary outcome).
+
+You provide some valid context for issues surrounding how to decide what an important effect size would be, but in the end you don't talk about values, or how you would pick a value.
+
+Grade: 1.85/3
+
 ##Assignment 6
 Hypothesis: We hypothesize that perseverance (GRIT scores) buffers the affective impact
 of a loss, thus reducing the expression of loser effects. 
