@@ -8,11 +8,15 @@ library(broom)
 grit_scores <- read.csv("hw6Feb13/data/prelim_test.csv")
 
 #Converting GRIT scores to GRIT_Z scores 
+## BMB: why as.numeric()? If you want to make sure it's not a matrix,
+##  you can use drop()
 grit_z <- grit_scores |> mutate(grit_z = as.numeric(scale(GRIT.Score)))
 
 grit_z <- grit_z |> mutate(choice_num = if_else(choice == "Stay", 1, 0))
+## BMB: could combine these steps in a single mutate() statement
+##  maybe too compact, but `as.numeric(choice == "Stay")` will convert to 0/1
 
-#Fitting Logisitic regression model
+#Fitting Logistic regression model
 log_model <- glm(choice_num ~ grit_z, data = grit_z, family = binomial())
 
 summary(log_model)
@@ -25,11 +29,17 @@ odd_ratio <- exp(coef(log_model)["grit_z"])
 #odds ratio interval would not include. After 1 you it increases the odds of staying. Below 1 it decreases the odds of staying. 
 exp(confint(log_model))
 
+## BMB: this is another way to do it:
+broom::tidy(log_model, exponentiate=TRUE, conf.int = TRUE)
+
 #Diagnostic Plot
 check_model(log_model)
+## BMB: what do you conclude from this ???
 
 #Prediction Plot something I learned from this random website online lol
-#https://stats.oarc.ucla.edu/r/dae/logit-regression/
+##https://stats.oarc.ucla.edu/r/dae/logit-regression/
+## BMB: the UCLA stats web site is actually pretty good ...
+
 newdata1 <- data.frame(
   grit_z = rep(seq(from = min(grit_z$grit_z), to = max(grit_z$grit_z), length.out=100)))
 newdata2 <- cbind(newdata1,predict(log_model, newdata = newdata1, type = "link", se.fit = TRUE))
@@ -47,7 +57,13 @@ ggplot(newdata2, aes(x = grit_z, y = PredictedProb)) +
     y = "Predicted probability of staying",
     title = "Predicted probability of staying across GRIT"
   ) +
-  theme_bw()
+    theme_bw() +
+    stat_sum(data = grit_z, aes(y=choice_num)) +
+    scale_size(breaks = c(1,4,7))
+
+## BMB: added individual data points (not too useful for binary data)
+##  it can also be useful to add average probs for binned data
+## (slightly more involved)
 
 #Prediction Plot according to class
 plot_1 <- emmeans(
@@ -65,4 +81,8 @@ coef_df <- tidy(log_model, conf.int = TRUE) |> filter(term == "grit_z")
 ggplot(coef_df, aes(term, estimate)) + geom_point() + geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.1) + 
   geom_hline(yintercept=0, linetype = "dashed") + coord_flip() +  labs(x = NULL, y = "Log-odds coefficient (95% CI)", title = "Coefficient plot: Effect of GRIT on staying") +theme_bw()
 #The Inferential plot showcases the effect previously seen. The effect of GRIT on decision to stay or switch is inconclusive due to the confidence interval passing 0.
+## BMB: not important, but you can use x=estimate, y = term,
+##  geom_errorbar with xmin/xmax -- then you don't need coord_flip()
+
+## mark: 2
 
