@@ -99,15 +99,15 @@ I will need around 179 to get a fully powered study.
 
 ##Assignment 7
 Hypothesis: We hypothesize that perseverance (GRIT scores) positively predicts performance outcomes.
-Specifically, individuals with higher GRIT scores will achieve higher performance scores, as grit showcases sustained effort which yields better outcomes.
+Individuals who have higher GRIT scores will perform better and have higher performance scores due to their sustained effort which yields better outcomes.
 
 Diagnostic Plots: A linear regression model was fit predicting performance scores from standardized GRIT scores.
-The Residuals vs. Fitted plot shows the red smoothing line hovering close to zero with no strong systematic pattern, suggesting the linearity assumption is reasonably met.
-The Q-Q plot shows residuals tracking closely along the diagonal reference line, with only mild deviations at the tails, showing approximate normality.
-Overall, the diagnostic plots do not reveal any major concerns that would require model adjustments.
+The Residuals vs. Fitted plot shows the red smoothing line close to zero with no real predictable pattern, which suggests that the linearity assumption has been reasonably met.
+The Q-Q plot shows residuals tracking moving reasonably fitted along the diagnonal reference line. However, it does show deviations that could be slightly concerning at the tails.
+Regardless, it showcases normality within the data. Overall, the diagnostic plots do not reveal any major concerns that would require model adjustments.
 
 Prediction Plot: The prediction plot shows the estimated performance score as a function of standardized GRIT.
-Contrary to our hypothesis, the slope is slightly negative, suggesting that higher GRIT scores are associated with marginally lower predicted performance scores.
+Unexpectadely, the slope is slightly negative, suggesting that higher GRIT scores are associated with lower performance scores. If I was to think of some sort of explanation it might be how failure and losing is necessary for GRIT to showcase within individuals.
 However, the confidence interval is wide and crosses 0, hinting at uncertainty in the inferences. 
 Given the overlap and the wide band, no strong conclusions can be drawn from this trend alone.
 
