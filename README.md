@@ -86,3 +86,25 @@ possible to make any statements regarding this value since the confidence interv
 This means that the effect of GRIT is unclear and the study needs further data. 
 Currently, I have about 88 participants and after conducting a power analysis,
 I will need around 179 to get a fully powered study. 
+
+##Assignment 7
+Hypothesis: We hypothesize that perseverance (GRIT scores) positively predicts performance outcomes.
+Specifically, individuals with higher GRIT scores will achieve higher performance scores, as grit showcases sustained effort which yields better outcomes.
+
+Diagnostic Plots: A linear regression model was fit predicting performance scores from standardized GRIT scores.
+The Residuals vs. Fitted plot shows the red smoothing line hovering close to zero with no strong systematic pattern, suggesting the linearity assumption is reasonably met.
+The Q-Q plot shows residuals tracking closely along the diagonal reference line, with only mild deviations at the tails, showing approximate normality.
+Overall, the diagnostic plots do not reveal any major concerns that would require model adjustments.
+
+Prediction Plot: The prediction plot shows the estimated performance score as a function of standardized GRIT.
+Contrary to our hypothesis, the slope is slightly negative, suggesting that higher GRIT scores are associated with marginally lower predicted performance scores.
+However, the confidence interval is wide and crosses 0, hinting at uncertainty in the inferences. 
+Given the overlap and the wide band, no strong conclusions can be drawn from this trend alone.
+
+Inferential Plot: The coefficient plot shows the estimated slope for the effect of standardized GRIT on performance (β = −0.422, 95% CI [−1.65, 0.80]).
+Although the point estimate is negative, the confidence interval crosses zero on both sides, indicating that the effect of GRIT on performance is statistically not clear (p = 0.495).
+This means we cannot conclude a reliable relationship between GRIT and performance scores. This once again reflects the need for a higher sample size (which is being done right now).
+
+
+
+
