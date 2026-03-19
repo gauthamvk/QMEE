@@ -115,6 +115,6 @@ Inferential Plot: The coefficient plot shows the estimated slope for the effect 
 Although the point estimate is negative, the confidence interval crosses zero on both sides, indicating that the effect of GRIT on performance is statistically not clear (p = 0.495).
 This means we cannot conclude a reliable relationship between GRIT and performance scores. This once again reflects the need for a higher sample size (which is being done right now).
 
-
+JD: All seems fine, except that you were supposed to do a “generalized” linear model. I like your conclusion was about sample size. Grade: 1.8/3
 
 
